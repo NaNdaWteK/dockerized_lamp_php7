@@ -1,0 +1,12 @@
+FROM php:7.0-apache
+
+RUN apt-get update
+
+ENV HOME=/www
+
+ADD . $HOME
+WORKDIR $HOME
+
+EXPOSE 8080
+EXPOSE 8081
+EXPOSE 3306
